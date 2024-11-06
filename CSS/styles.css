@@ -1,0 +1,255 @@
+
+/*
+Author: Yi Chen
+File Name: styles.css
+Date: 2024-09-29
+Description: This is a file for CST8285 Assignment. This is the CSS style for the other HTML files. 
+*/
+
+/* Set the height of the html and body to 100% and remove default margin */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif; /* Set the font family */
+    line-height: 1.6;               /* Set line height for better readability */
+    display: flex;                  /* Use flexbox layout */
+    flex-direction: column; /* Ensure body uses column direction */
+    justify-content: space-between; /* Space between header, content, and footer */
+    min-height: 100vh; /* Full viewport height */
+    width: 100%;        /* Full width */
+    margin-left: auto;  /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
+}
+
+header {
+    background: #333;   /* Dark background for header */
+    color: #fff;        /* White text color */
+    padding: 10px 0;        /* Padding for header */
+    text-align: center;     /* Center text in header */
+}
+
+strong {
+    text-decoration: underline; /* Underline for strong elements */
+}
+
+
+    nav ul {
+        /* remove default padding */
+        padding: 0;
+        /* set the item's bullet style to square */
+        list-style: square;
+        /* set the elements to flex box, enabling horizontal layout  */
+        display: flex;
+        /* make content centering */
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px; /* Horizontal margin between items */
+    }
+
+    nav ul li a {
+        /* text color */
+        color: #fff ;
+        /* text decoraltion */
+        text-decoration:underline;
+    }
+
+    section {
+        padding: 20px;  /* Padding for section elements */
+    }
+/* footer style */
+footer {
+    background: #333;   /* Dark background for footer */
+    color: #fff;    /* White text color */
+    text-align: center; /* Center text in footer */
+    padding: 10px;  /* Padding for footer */
+    width: 100%;    /* Full width for footer */
+    bottom:0;   /* Align to bottom */
+    }
+
+/* Landing Page */
+.landing {
+    text-align: center; /* Center text in landing section */
+}
+
+/* picture style */
+.profile-pic {
+    width: 100%;    /* Full width */
+    height: auto;   /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular shape for profile picture */
+    max-width: 240px;   /* Maximum width for profile picture */
+    display:block;   /* Display as block */
+    margin: auto;   /* Center horizontally */
+}
+
+/* style for resume section */
+    .resume {
+        margin: 20px;
+        padding: 20px;
+        /* add background-color */
+        background-color: #f4f4f4;
+        /* round corners */
+        border-radius: 50px;
+        /* slight shadow */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .resume h1 {
+        text-align: center; /* Center header in resume section */
+        margin-bottom: 10px;    /* Bottom margin */
+    }
+    /* h1 and h2 titles in resume */
+    .resume h1, .resume h2 {
+        margin: 0px;    /* Remove margin */
+        /* set the elements to flex box, enabling horizontal layout  */
+        display: flex;
+        /* horizontal layout */
+        flex-direction: column;
+        /* make content centering */
+        justify-content: center;
+    }
+    /* style for the job titles */
+    .resume h3 {
+        font-size: 1.2em;   /* Slightly larger font size */
+        color:green;    /* Green color for job titles */
+    }
+
+    /* style for skill and responsibilites lists */
+    .resume ul {
+        padding-left: 20px; /* Indent list items */
+    }
+
+    .resume ul li {
+        /* circle list style */
+        list-style-type:circle;
+    }
+
+    /* links color */
+    .resume a {
+        color: blue;    /* Blue color for links */
+    }
+
+    /* resume paragraphs style */
+    .resume p {
+        /* top & bottom 5px, left & right 0 */
+        margin: 5px 0;
+        line-height: 1.6 ;  /* Line height for better readability */
+    }
+
+
+/* Projects Page */
+.projects {
+    margin: 20px;   /* Margin around projects section */
+    padding: 20px;  /* Padding for projects section */
+    /* add background-color */
+    background-color: #f4f4f4;
+    /* round corners */
+    border-radius: 50px;
+    /* slight shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.projects {
+    text-align: center; /* Center text in projects section */
+}
+
+.project-content{
+    display: flex;  /* Use flexbox for layout */
+    flex-direction: row;    /* Horizontal layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center;    /* Align items vertically */
+    flex-wrap: wrap;     /* Allow wrapping of items */
+}
+
+
+.paragraph {
+    flex : 1;   /* Allow paragraph to take available space */
+    padding-right: 20px;    /* Right padding */
+}
+
+.image-wrapper {
+    max-width: 480px;   /* Maximum width for images */
+    flex :1;    /* Allow image wrapper to take available space */
+    padding: 20px;  /* Padding for image wrapper */
+}
+
+#project2 {
+    display: none;  /* Hide project 2 by default */
+}
+
+.project-content img {
+    width: 100%;    /* Full width for images */
+    max-width: 480px;    /* Maximum width for images */
+    height: auto;   /* Maintain aspect ratio */
+}
+
+
+/* Contact Form */
+.contact-form h1 {
+    text-align: center; /* Center header in contact form */
+}
+
+.contact-form form {
+    max-width: 600px;   /* Maximum width for form */
+    margin: 0 auto;     /* Center form horizontally */
+    background: #f4f4f4;    /* Light background color */
+    padding: 20px;          /* Padding for form */
+    border-radius: 5px;     /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    /* Slight shadow */
+}
+
+.contact-form label {
+    display: block; /* Display label as block */
+    margin-bottom: 8px; /* Bottom margin for labels */
+    font-weight: bold;  /* Bold font for labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;    /* Full width for input and textarea */
+    padding: 10px;  /* Padding for input and textarea */
+    margin-bottom: 15px;    /* Bottom margin for input and textarea */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px;    /* Font size for input and textarea */
+}
+
+.contact-form textarea {
+    height: 150px;  /* Fixed height for textarea */
+    resize: vertical;   /* Allow vertical resizing only */
+}
+
+.contact-form button {
+    background-color: #333; /* Dark background for button */
+    color: #fff;    /* White text color */
+    border: none;   /* Remove border */
+    padding: 10px 15px; /* Padding for button */
+    font-size: 16px;    /* Font size for button */
+    cursor: pointer;    /* Pointer cursor on hover */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.contact-form button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+
+/* Responsive design 
+mobile screen */
+ @media (max-width: 480px){
+    body{
+        font-size: 12px; /* Adjust font size for smaller screens */
+        padding: 5px;   /* Adjust padding */
+    }
+    header {
+        padding: 10px 0; /* Adjust padding */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+    .resume{
+        margin: 20px;   /* Margin for resume section */
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+ }

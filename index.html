@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+Author: Yi Chen
+File Name: index.html
+Date: 2024-09-29
+Description: This is a file for CST8285 Section-332 Assignment. It is an introduction of mine. 
+-->
+    <!-- the character encoding, viewport settings, and the title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Yi Chen's Introduction Page</title>
+    <!-- Links to an external CSS file -->
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+<body>
+    <!-- Header section containing the navigation bar -->
+    <header>
+        <nav>
+            <!-- links to other pages such as Home, Resume, Projects, and Contact -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main section to introduce -->
+    <section class="landing">
+        <!-- Greeting with highlighted name -->
+        <h1>Home Page</h1>
+            <!-- Greeting with highlighted name -->
+            <h2>Hello, I'm <strong>Yi Chen</strong></h2>
+        <!-- Image of the profile -->
+        <img src="images/John_yosimite.jpg" alt="My Image" class="profile-pic">
+        <!-- Introduction and educational information -->
+        <!-- Link to external site about Algonquin College -->
+        <p>I am a passionate <strong>junior web developer</strong> with a focus on creating responsive, user-friendly websites.</p>
+        <p>I am studying at Algonquin College, my course is computer programming. <a href="https://www.algonquincollege.com/" target="_blank">Learn more about my college</a>.</p>
+    </section>
+    <!-- Footer section containing copyright information -->
+    <footer>
+        <p>&copy; 2024 Yi Chen. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for a typewriter effect -->
+    <script>
+        // The text that will appear as a typing effect
+        const introText = "Hello, I'm Yi Chen.";
+        let i = 0;
+        // Selecting the element where the typewriter effect will happen
+        const introElement = document.querySelector('.landing h2');
+    
+        // Function to display each character with a delay to simulate typing
+        function typeWriter() {
+            if (i < introText.length) {
+                // Add one character at a time
+                introElement.innerHTML += introText.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100); // Delay of 100ms between characters
+            }
+        }
+        // Trigger typewriter effect when the page loads
+        window.onload = typeWriter;
+    </script>
+
+
+</body>
+</html>

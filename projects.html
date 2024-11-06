@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+Author: Yi Chen
+File Name: projects.html
+Date: 2024-09-29
+Description: This is a file for Section-332 Assignment. This page shows my projects. 
+-->
+    <!-- the character encoding, viewport settings, and the title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Your Name</title>
+    <!-- Links to an external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header section containing the navigation bar -->
+    <header>
+        <nav>
+            <!-- links to other pages such as Home, Resume, Projects, and Contact -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main section for displaying projects -->
+    <section class="projects">
+        <h1>Projects</h1>
+        <!-- Project 1 section -->
+        <div class="project" id="project1">
+            <!-- Description of the project -->
+            <h3>Project 1: Registration Website</h3>
+            <div class="project-content">
+                <div class = "paragraph">
+                    <p>This Registration Website is a responsive web application built using HTML and CSS. It allows users to register for events or services through an interactive and user-friendly form. Using CSS for styling, the website is fully responsive, adapting seamlessly to various screen sizes and devices.</p>
+                </div>
+                <!-- Image associated with Project 1 -->
+                <div class="image-wrapper">
+                    <img src="images/Registration_website.png" alt="Registration_website" class ="Registration_picture">
+                </div>
+            </div>
+        </div>
+         <!-- Project 2 section -->
+        <div class="project" id="project2" >
+            <h3>Project 2: Hometown Website</h3>
+            <div class="project-content">
+                <!-- Description of the project -->
+                <div class = "paragraph">
+                    <p>This website introduces my hometown. It is a simple website without any CSS styling. It has two pages that can be switched between by clicking the web links.</p>
+                </div>
+                 <!-- Images associated with Project 2 -->
+                <div class="image-wrapper">
+                    <img src="images/Hometown.png" alt="Hometown">
+                    <img src="images/Hometown-share_information.png" alt="Hometown2">
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 section -->
+        <div class="project" id="project3">
+            <h3>Project 3: Portfolio Website</h3>
+            <div class="project-content">
+                <div class="paragraph">
+                    <p>This Portfolio Website showcases my skills and projects. Built with HTML, CSS, and JavaScript, it features a clean design and interactive elements to engage visitors.</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/index.png" alt="Portfolio">
+                </div>
+            </div>
+        </div>
+
+            <!-- Project 4 section -->
+        <div class="project" id="project4">
+            <h3>Project 4: Database System</h3>
+            <div class="project-content">
+                <div class="paragraph">
+                    <p>
+                        In this project, we developed a database management system using SQL Server Management Studio (SSMS) and Microsoft Access. First, we designed and established the database schema in SSMS, including key tables for customers, equipment, orders, and staff, ensuring data integrity and consistency. Next, we created a series of user-friendly forms in Microsoft Access that enable users to easily input and query data, facilitating everyday operations through an intuitive interface. Additionally, we designed multiple reports to extract and analyze critical data from the database, assisting management in making informed decisions. The project emphasizes effective data management and a user-friendly experience, aiming to enhance business efficiency.
+                    </p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="images/MS_ACCESS.png" alt="MS_ACCESS">
+                    <img src="images/SSMS.png" alt="SSMS">
+                </div>
+            </div>
+        </div>
+        <!-- Navigation buttons for cycling through projects -->
+        <button onclick="prevProject()">Previous</button>
+        <button onclick="nextProject()">Next</button>
+    </section>
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+    </footer>
+    <!-- JavaScript to handle project navigation -->
+    <script>
+        let currentProject = 1;
+        // Function to show the specified project based on its number
+        function showProject(projectNumber) {
+             // Hide all projects
+            for (let i = 1; i <= 4; i++) {
+             document.getElementById('project' + i).style.display = 'none';
+            }
+            // Display the selected project
+            document.getElementById('project' + projectNumber).style.display = 'block';
+        }
+
+        // Function to navigate to the next project
+        function nextProject() {
+            currentProject = currentProject === 4 ? 1 : currentProject + 1;
+            showProject(currentProject);
+        }
+
+        // Function to navigate to the previous project
+        function prevProject() {
+            currentProject = currentProject === 4 ? 1 : currentProject + 1;
+            showProject(currentProject);
+        }
+
+        // Initially show the first project
+        showProject(currentProject);
+    </script>
+
+
+</body>
+</html>
